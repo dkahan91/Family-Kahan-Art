@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<nav >
+<p style="text-align:right;"><a href="login.html">Login</a></p>
+<ul style="list-style:none;text-align:center;font-size:300%;">
+  <li style="display:inline;"><a href="shop.html">Home</a></li>
+  <li style="display:inline;"><a href="shop.html">Shop</a></li>
+  <li style="display:inline;"><a href="shop.html">Comission</a></li>
+  <li style="display:inline;"><a href="shop.html">Contact</a></li>
+</ul>
+</nav>
+<form action="home.html" onsubmit="return myfunc()" method="post">
+  <p>Please enter your credentials in the boxes below</p>
+<p>Username:</p><input id="uname" type="text" name="uname">
+  <p>Password:</p><input id="pword" type="password" name="pword">
+  <input type="submit" title="Submit" value="submit">
+  <p id="error"> </p>
+</form>
+  <script type="text/javascript">
+function myfunc(){
+var valid = true
+var username = document.getElementById('uname')
+var password = document.getElementById('pword')
+if (username.value =="") {
+   document.getElementById('error').innerHTML = 'You have left the username box blank!';
+   valid = false
+}
+if(password.value==""){
+  document.getElementById('error').innerHTML = document.getElementById('error').innerHTML + 'You have left password blank!';
+  valid = false}
+
+return valid
+}
+  </script>
